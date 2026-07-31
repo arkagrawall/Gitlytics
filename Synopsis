@@ -1,0 +1,65 @@
+# Project Synopsis
+
+## Title
+
+**Gitlytics — GitHub Profile Analyzer & Developer Analytics Dashboard**
+
+## Candidate Details
+
+* **Student Name:** Ark Agrawal
+* **University Roll Number:** 22515000030
+* **Course & Branch:** B.Tech — Computer Science & Engineering
+* **Institution:** GLA University, Mathura
+
+---
+
+## Introduction
+
+In the contemporary software engineering landscape, GitHub profiles serve as a primary portfolio demonstrating practical coding proficiency, open-source engagement, and continuous learning. While GitHub provides extensive raw metrics, these data points are dispersed across distinct pages and repositories, making it tedious for recruiters, mentors, and developers to obtain a comprehensive synthesis of an engineer's true productivity and language competency.
+
+**Gitlytics** is a client-side frontend web application conceived to bridge this gap. It aggregates developer profile indicators, public repository catalogs, technology language distributions, and 12-month contribution trends into an elegant, unified, and interactive dashboard.
+
+---
+
+## Problem Statement
+
+Evaluating a developer's GitHub output currently requires navigating multiple tabs to examine commits, repository descriptions, star ratings, and language tags. Key analytical metrics—such as percentage breakdowns of programming languages, average monthly contribution frequencies, and median activity milestones—are not calculated natively on profile homepages. Gitlytics addresses this deficiency by supplying a single-page analytical console that calculates and renders these metrics dynamically.
+
+---
+
+## Objectives
+
+* To build a modern, high-performance, responsive single-page web dashboard using core frontend web technologies.
+* To aggregate developer metrics including total repositories, total stars, total forks, and 12-month contribution tallies.
+* To compute dynamic language share percentages across public repositories with color-coded visualization bars.
+* To render contribution velocity bar graphs reflecting monthly commit, PR, and review patterns.
+* To determine analytical insights including median monthly contributions, peak activity months, and most popular repositories.
+* To provide immediate demonstration capabilities using verified snapshots of real GitHub profiles (`gautam100` and `torvalds`).
+
+---
+
+## Scope of the Project
+
+The current implementation focuses on client-side rendering, semantic document structure, and responsive layout systems using HTML5, CSS3, JavaScript (ES6+), and Bootstrap 5 CDN. The system features a custom Modern Dark & Emerald theme, client-side sorting/filtering algorithms, dynamic DOM generation, and responsive adaptation across mobile, tablet, and desktop viewports. Future iterations will interface directly with authenticated OAuth GitHub REST and GraphQL APIs for live account synchronization.
+
+---
+
+## Technologies Used
+
+* **HTML5:** Semantic architecture, form controls, and structured tables.
+* **CSS3:** Custom stylesheet, CSS variables, Flexbox, CSS Grid, animations, and media queries.
+* **Bootstrap 5 (CDN):** Responsive grid, navigation bars, cards, and modal components.
+* **JavaScript (ES6+):** Pure vanilla JavaScript for data parsing, array operations (`map`, `filter`, `reduce`), sorting routines, and dynamic DOM manipulation.
+* **Git & GitHub:** Version control, branch management, and milestone tracking.
+
+---
+
+## Expected Outcome
+
+The resulting project is a production-ready, fully responsive static web application that enables users to evaluate GitHub profiles with speed and visual clarity. The project highlights mastery in standard-compliant frontend architecture, responsive design principles, clean code separation, and foundational computational logic.
+
+---
+
+## Conclusion
+
+Gitlytics successfully delivers an intuitive analytical experience that transforms raw repository catalogs into structured developer intelligence. Developed to satisfy university laboratory and project evaluation criteria, it stands as a robust foundation for future full-stack developer portfolio platforms.
