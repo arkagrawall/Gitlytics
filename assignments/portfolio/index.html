@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ark Agrawal | CSE Student & Web Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #090d16;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        header {
+            min-height: 80px;
+            background: #0f172a;
+            border-bottom: 1px solid #1e293b;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #10b981;
+            letter-spacing: -0.5px;
+        }
+
+        .logo p {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: color 0.2s ease, border-bottom 0.2s ease;
+            padding-bottom: 6px;
+        }
+
+        nav ul li a:hover,
+        nav ul li:first-child a {
+            color: #10b981;
+            border-bottom: 3px solid #10b981;
+        }
+
+        .hero {
+            min-height: 380px;
+            background: linear-gradient(135deg, #0f172a 0%, #062b21 100%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 10%;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .hero-text {
+            max-width: 580px;
+        }
+
+        .hero-text .badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .hero-text h1 {
+            color: #ffffff;
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            color: #34d399;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            color: #94a3b8;
+            margin-bottom: 24px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cv-button {
+            display: inline-block;
+            background: #10b981;
+            color: #090d16;
+            padding: 11px 26px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .cv-button:hover {
+            background: #34d399;
+            transform: translateY(-2px);
+        }
+
+        .contact-btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: #e2e8f0;
+            border: 1px solid #334155;
+            padding: 11px 26px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-btn-outline:hover {
+            border-color: #10b981;
+            color: #10b981;
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 24px;
+            object-fit: cover;
+            border: 4px solid #10b981;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+        }
+
+        main {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        .top-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.4fr;
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+
+        .card-box {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            color: #10b981;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+
+        .about p {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 12px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: #1e293b;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #e2e8f0;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+        }
+
+        .education table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .education th,
+        .education td {
+            border: 1px solid #1e293b;
+            padding: 9px;
+            text-align: left;
+        }
+
+        .education th {
+            background: #1e293b;
+            color: #34d399;
+            font-weight: 700;
+        }
+
+        .education td {
+            color: #94a3b8;
+        }
+
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .project-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 18px;
+            transition: all 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: #10b981;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+        }
+
+        .project-card h3 {
+            color: #ffffff;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .project-card p {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 12px;
+        }
+
+        .project-card a {
+            color: #10b981;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #cbd5e1;
+        }
+
+        .contact input,
+        .contact textarea {
+            background: #090d16;
+            border: 1px solid #334155;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s ease;
+        }
+
+        .contact input:focus,
+        .contact textarea:focus {
+            outline: none;
+            border-color: #10b981;
+        }
+
+        .contact textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-btns {
+            display: flex;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .btn-submit {
+            background: #10b981;
+            color: #090d16;
+            font-weight: 700;
+            border: none;
+            padding: 11px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .btn-submit:hover {
+            background: #34d399;
+        }
+
+        .btn-reset {
+            background: #1e293b;
+            color: #94a3b8;
+            border: 1px solid #334155;
+            padding: 11px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn-reset:hover {
+            color: white;
+            background: #334155;
+        }
+
+        .social-box {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px solid #1e293b;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .social-link {
+            background: #1e293b;
+            color: #cbd5e1;
+            padding: 8px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid #334155;
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            background: #10b981;
+            color: #090d16;
+            border-color: #10b981;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0f172a;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 24px;
+                padding: 30px 6%;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .top-section, .bottom-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Ark Agrawal</h1>
+            <p>Roll No: 22515000030 | GLA University</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <span class="badge">Computer Science & Engineering</span>
+            <h1>Hi, I'm Ark Agrawal</h1>
+            <h2>Full-Stack & Frontend Developer</h2>
+            <p>
+                Student at GLA University passionate about web technologies, developer tooling, 
+                and building modern, high-performance web applications.
+            </p>
+            <div class="hero-buttons">
+                <a href="resume.pdf" target="_blank" class="cv-button">View Resume</a>
+                <a href="#contact" class="contact-btn-outline">Get In Touch</a>
+            </div>
+        </div>
+        <img src="profile.jpg" alt="Ark Agrawal" class="profile-image">
+    </section>
+
+    <main>
+        <div class="top-section">
+            <div class="card-box about" id="about">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    I am an ambitious Computer Science student at GLA University, Mathura. 
+                    I focus on frontend architecture, responsive interface engineering, and software development.
+                </p>
+                <p>
+                    Based in Delhi, India, I enjoy solving problems, analyzing repository dynamics, 
+                    and creating clean, user-centric interfaces.
+                </p>
+            </div>
+
+            <div class="card-box skills" id="skills">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item"><span class="skill-dot"></span>HTML5 / CSS3</div>
+                    <div class="skill-item"><span class="skill-dot"></span>JavaScript (ES6+)</div>
+                    <div class="skill-item"><span class="skill-dot"></span>Bootstrap 5</div>
+                    <div class="skill-item"><span class="skill-dot"></span>Tailwind CSS</div>
+                    <div class="skill-item"><span class="skill-dot"></span>Git & GitHub</div>
+                    <div class="skill-item"><span class="skill-dot"></span>Python Basics</div>
+                </div>
+            </div>
+
+            <div class="card-box education" id="education">
+                <h2 class="section-title">Education</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Program</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>B.Tech CSE</b></td>
+                            <td>GLA University</td>
+                            <td>2022 - 2026</td>
+                            <td>8.6 CGPA</td>
+                        </tr>
+                        <tr>
+                            <td><b>Class 12th</b></td>
+                            <td>CBSE Board</td>
+                            <td>2022</td>
+                            <td>91%</td>
+                        </tr>
+                        <tr>
+                            <td><b>Class 10th</b></td>
+                            <td>CBSE Board</td>
+                            <td>2020</td>
+                            <td>93%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="card-box" id="projects">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <h3>1. Gitlytics — GitHub Profile Analyzer</h3>
+                        <p>A developer intelligence dashboard built with HTML, CSS, JavaScript, and Bootstrap 5 CDN showcasing repository metrics and language breakdowns.</p>
+                        <a href="https://github.com/arkagrawall/Gitlytics" target="_blank">View Repository →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>2. Satark — Security & Incident Portal</h3>
+                        <p>Crime analysis and public safety reporting dashboard designed to visualize risk factors and incident reports.</p>
+                        <a href="https://github.com/arkagrawall" target="_blank">View Details →</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>3. Adhigam — Digital Learning Hub</h3>
+                        <p>An interactive educational portal providing self-paced learning resources and modular assessments.</p>
+                        <a href="https://github.com/arkagrawall" target="_blank">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="social-box">
+                    <span style="font-size: 13px; font-weight: 700; color: #cbd5e1;">Connect with me:</span>
+                    <div class="social-links">
+                        <a href="https://github.com/arkagrawall" target="_blank" class="social-link">GitHub</a>
+                        <a href="mailto:arkagrawal.work@gmail.com" class="social-link">Email</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-box contact" id="contact">
+                <h2 class="section-title">Contact Me</h2>
+                <form onsubmit="handleContact(event)">
+                    <div>
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" placeholder="Your Full Name" required>
+                    </div>
+                    <div>
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" placeholder="Your Email Address" required>
+                    </div>
+                    <div>
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" placeholder="Type your message..." required></textarea>
+                    </div>
+                    <div class="form-btns">
+                        <button type="submit" class="btn-submit">Send Message</button>
+                        <button type="reset" class="btn-reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Ark Agrawal (Roll No: 22515000030). GLA University. All Rights Reserved.
+    </footer>
+
+    <script>
+        function handleContact(e) {
+            e.preventDefault();
+            const name = document.getElementById("contact-name").value;
+            const email = document.getElementById("contact-email").value;
+            const msg = document.getElementById("contact-message").value;
+            const subject = encodeURIComponent("Portfolio Message from " + name);
+            const body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + msg);
+            window.location.href = "mailto:arkagrawal.work@gmail.com?subject=" + subject + "&body=" + body;
+        }
+    </script>
+</body>
+</html>
