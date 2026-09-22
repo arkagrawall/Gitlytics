@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Portal</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="brand-badge">Academic Enrollment</div>
+        <h2>Student Course Registration</h2>
+        <p class="subtitle">Complete the application to register for academic term electives</p>
+
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Registration submitted successfully!');">
+            <div class="form-group">
+                <label for="reg-name">Full Name</label>
+                <input type="text" id="reg-name" placeholder="Ark Agrawal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-roll">University Roll Number</label>
+                <input type="text" id="reg-roll" placeholder="22515000030" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-email">Official University Email</label>
+                <input type="email" id="reg-email" placeholder="arkagrawal.work@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-branch">Engineering Department</label>
+                <select id="reg-branch" required>
+                    <option value="">Select Department</option>
+                    <option value="CSE" selected>Computer Science & Engineering</option>
+                    <option value="AIML">Artificial Intelligence & Machine Learning</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="ECE">Electronics & Communication</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Study Mode</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="mode" value="Regular" checked> Regular Campus</label>
+                    <label><input type="radio" name="mode" value="Hybrid"> Hybrid Lab</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Elective Courses</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="elective" value="web" checked> Advanced Frontend</label>
+                    <label><input type="checkbox" name="elective" value="cloud"> Cloud Computing</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-register">Submit Registration</button>
+        </form>
+    </div>
+</body>
+</html>

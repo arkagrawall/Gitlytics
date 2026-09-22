@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #090d16;
+    color: #e2e8f0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 100%;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.header-seal {
+    text-align: center;
+    border-bottom: 2px solid #10b981;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.header-seal .badge {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.exam-title {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+.student-details {
+    background: #090d16;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #cbd5e1;
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+}
+
+strong {
+    color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #1e293b;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #1e293b;
+    color: #10b981;
+    font-weight: 700;
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(30, 41, 59, 0.3);
+}
+
+td {
+    color: #cbd5e1;
+}
+
+.total-row td {
+    background-color: rgba(16, 185, 129, 0.1) !important;
+    color: #34d399;
+    font-weight: 700;
+    border-top: 2px solid #10b981;
+}
+
+.marksheet-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #1e293b;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.marksheet-footer strong {
+    color: #10b981;
+}
