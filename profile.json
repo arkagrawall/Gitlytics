@@ -1,0 +1,114 @@
+{
+  "login": "torvalds",
+  "id": 1024025,
+  "name": "Linus Torvalds",
+  "company": "Linux Foundation",
+  "location": "Portland, OR",
+  "bio": null,
+  "avatar_url": "https://avatars.githubusercontent.com/u/1024025?v=4",
+  "html_url": "https://github.com/torvalds",
+  "public_repos": 12,
+  "public_gists": 1,
+  "followers": 326893,
+  "following": 0,
+  "created_at": "2011-09-03T15:26:22Z",
+  "repositories": [
+    {
+      "name": "linux",
+      "description": "Linux kernel source tree",
+      "language": "C",
+      "stargazers_count": 250711,
+      "forks_count": 66372,
+      "html_url": "https://github.com/torvalds/linux"
+    },
+    {
+      "name": "GuitarPedal",
+      "description": "Linus learns analog circuits",
+      "language": "C",
+      "stargazers_count": 2400,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/GuitarPedal"
+    },
+    {
+      "name": "uemacs",
+      "description": "Random version of microemacs with private modifications",
+      "language": "C",
+      "stargazers_count": 2200,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/uemacs"
+    },
+    {
+      "name": "AudioNoise",
+      "description": "Random digital audio effects",
+      "language": "C",
+      "stargazers_count": 4500,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/AudioNoise"
+    },
+    {
+      "name": "HunspellColorize",
+      "description": "Colorize spelling mistakes with Hunspell",
+      "language": "C",
+      "stargazers_count": 389,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/HunspellColorize"
+    },
+    {
+      "name": "test-tlb",
+      "description": "Stupid memory latency and TLB tester",
+      "language": "C",
+      "stargazers_count": 1100,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/test-tlb"
+    },
+    {
+      "name": "pesconvert",
+      "description": "Brother PES file converter",
+      "language": "C",
+      "stargazers_count": 584,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/pesconvert"
+    },
+    {
+      "name": "1590A",
+      "description": "Guitar pedal design project",
+      "language": "OpenSCAD",
+      "stargazers_count": 576,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/1590A"
+    },
+    {
+      "name": "subsurface-for-dirk",
+      "description": "Personal Subsurface-related repository",
+      "language": "C++",
+      "stargazers_count": 477,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/subsurface-for-dirk"
+    },
+    {
+      "name": "libdc-for-dirk",
+      "description": "Personal syncing repository",
+      "language": "C",
+      "stargazers_count": 409,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/libdc-for-dirk"
+    },
+    {
+      "name": "libgit2",
+      "description": "Cross-platform, linkable Git library implementation",
+      "language": "C",
+      "stargazers_count": 392,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/libgit2"
+    },
+    {
+      "name": "ScrollWheel",
+      "description": "Minimalist RP2350 magnetic sensor scroll wheel project",
+      "language": "C",
+      "stargazers_count": 379,
+      "forks_count": 0,
+      "html_url": "https://github.com/torvalds/ScrollWheel"
+    }
+  ],
+  "data_note": "Snapshot for a static demo. Repository star/fork counts are approximate and may be outdated."
+}
