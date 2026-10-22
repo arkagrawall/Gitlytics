@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <div class="theme-card">
+        <span class="badge">CSS Custom Properties</span>
+        <h1>Color Theme Switcher</h1>
+        <p class="subtitle">Change interface color palettes dynamically</p>
+
+        <div class="theme-controls">
+            <div class="select-group">
+                <label for="theme-select">Select Preferred Palette</label>
+                <select id="theme-select">
+                    <option value="dark" selected>Midnight Dark</option>
+                    <option value="emerald">Emerald Oasis</option>
+                    <option value="light">Crisp Light</option>
+                </select>
+            </div>
+
+            <button id="toggle-btn" class="btn-toggle">Quick Toggle (Dark / Light)</button>
+        </div>
+
+        <div class="preview-box">
+            <h3>Theme Preview Component</h3>
+            <p>This dynamic container responds immediately to CSS variables updated via JavaScript data-theme attributes.</p>
+            <div class="preview-tags">
+                <span class="tag">#ModernUI</span>
+                <span class="tag">#JavaScript</span>
+                <span class="tag">#Responsive</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
