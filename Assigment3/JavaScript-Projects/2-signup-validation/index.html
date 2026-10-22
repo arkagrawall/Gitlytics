@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="signup-card">
+        <span class="badge">Security & Form Handling</span>
+        <h1>Create Account</h1>
+        <p class="subtitle">Join our developer network today</p>
+
+        <form id="signup-form" novalidate>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="At least 3 characters">
+                <small class="error-msg" id="username-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@domain.com">
+                <small class="error-msg" id="email-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="At least 6 characters">
+                <small class="error-msg" id="password-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Re-enter password">
+                <small class="error-msg" id="confirm-error"></small>
+            </div>
+
+            <button type="submit" class="btn-signup">Register Now</button>
+        </form>
+
+        <div id="form-success" class="success-banner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
