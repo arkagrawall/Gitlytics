@@ -1,0 +1,43 @@
+1. What is the difference between frontend and backend JavaScript?
+
+Frontend JavaScript executes directly within the client's web browser environment. Its primary objective is interface interactivity, DOM manipulation, handling user browser events (such as clicks, keystrokes, and form submissions), and asynchronously loading data via the Fetch API without full-page refreshes. In contrast, backend JavaScript runs on a server runtime environment, predominantly Node.js. It manages server-side business logic, database queries (e.g., MongoDB, PostgreSQL), API endpoints, authentication workflows, file system I/O, and server security.
+
+2. What is DOM?
+
+DOM stands for Document Object Model. It is a language-agnostic programming interface provided by web browsers that models an HTML document as a structured hierarchy of nodes and objects. When a browser loads a webpage, it parses the HTML and generates this DOM tree. JavaScript interacts with this interface through methods like getElementById(), querySelector(), and createElement() to dynamically read, insert, delete, or modify HTML tags, attributes, and CSS styles in real time.
+
+3. What is an event in JavaScript?
+
+An event is a specific signal or notification dispatched by the browser indicating that a user action or system state change has occurred. Examples include clicking a button (click), pressing a key (keydown), typing into an input field (input), submitting a form (submit), or completing document parsing (DOMContentLoaded). JavaScript utilizes event handlers, predominantly through the element.addEventListener(type, listener) method, to execute callback functions whenever these events occur.
+
+4. What is the event loop in JavaScript?
+
+JavaScript operates as a single-threaded runtime with a single execution call stack. To handle asynchronous non-blocking operations (such as timers, network requests, and file I/O), JavaScript relies on the event loop concurrency model. When an asynchronous operation completes, its associated callback is queued inside either the Microtask Queue (for Promises and MutationObservers) or the Macrotask/Callback Queue (for setTimeout, setInterval, and I/O). The event loop constantly monitors the call stack; once the stack is completely empty, it pushes pending microtasks first, followed by macrotasks, into the call stack for execution.
+
+5. What is hoisting in JavaScript?
+
+Hoisting is a behavior during the JavaScript compilation phase where variable and function declarations are assigned memory slots before the code is executed line-by-line. Function declarations are hoisted completely, meaning they can be called before their definition in the code. Variables declared with var are hoisted and initialized to undefined. However, variables declared with let and const are hoisted into a "Temporal Dead Zone" (TDZ) and cannot be accessed or evaluated until the execution flow reaches their actual declaration statement, throwing a ReferenceError if accessed prematurely.
+
+6. What is event bubbling?
+
+Event bubbling is a phase of event propagation in the DOM tree where an event triggered on the deepest target element (the innermost child) travels upward through all its ancestral parent elements until reaching the root document object. For instance, clicking a button inside a section triggers the click listener on the button first, then on the section, then on the main container, and finally on the document. Developers can intercept or prevent this upward propagation by invoking event.stopPropagation() inside the event listener function.
+
+7. What is the difference between named function, anonymous function, and arrow function?
+
+A named function is defined with an explicit identifier (e.g., function calculateSum(a, b) { ... }) and can be invoked by name and recursed conveniently. An anonymous function is defined without a name and is typically assigned to a variable or passed inline as a callback (e.g., function(e) { ... }). An arrow function, introduced in ES6 with the => syntax, provides concise syntax for function expressions (e.g., (a, b) => a + b). Crucially, arrow functions do not bind their own this, arguments, or super keywords; instead, they lexically capture this from their enclosing execution context, and cannot be used as constructors.
+
+8. Explain for-of and for-in loops.
+
+The for-of loop is designed to iterate sequentially over the values of iterable data structures, such as Arrays, Strings, Sets, Maps, and NodeLists (e.g., for (const value of array)). Conversely, the for-in loop iterates over all enumerable properties (keys) of an object or indices of an array (e.g., for (const key in object)). In standard software practices, for-of is preferred for traversing array elements and collections, whereas for-in is reserved for inspecting object property keys.
+
+9. Explain any five array methods.
+
+- push(): Appends one or more items to the end of an array and returns the newly updated array length.
+- pop(): Removes and returns the final element of an array, mutating the array length.
+- map(): Transforms an array by invoking a provided callback function on every element, returning a brand new array of equal length without mutating the original.
+- filter(): Evaluates each element against a boolean predicate function, returning a new array containing exclusively the elements that satisfy the condition.
+- reduce(): Executes a reducer callback on each array element against an accumulator, boiling down the elements into a single aggregate result (such as a sum, average, or flattened object).
+
+10. What is a callback function in JavaScript?
+
+A callback function is any function that is passed as an argument to another function, intended to be executed ("called back") at a later designated point in time. Callbacks can operate synchronously (such as functions passed to Array.prototype.forEach or Array.prototype.map) or asynchronously (such as event handlers, setTimeout callbacks, or resolved Promise continuations). They form the foundational pillar of asynchronous programming and modular event-driven architecture in JavaScript.
