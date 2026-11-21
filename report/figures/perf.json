@@ -1,0 +1,32 @@
+[
+  {
+    "ready": 591,
+    "dcl": 245,
+    "fcp": 372,
+    "interact": 28.4
+  },
+  {
+    "ready": 708,
+    "dcl": 273,
+    "fcp": 460,
+    "interact": 16.1
+  },
+  {
+    "ready": 609,
+    "dcl": 255,
+    "fcp": 396,
+    "interact": 28.6
+  },
+  {
+    "ready": 575,
+    "dcl": 230,
+    "fcp": 356,
+    "interact": 19.2
+  },
+  {
+    "ready": 602,
+    "dcl": 251,
+    "fcp": 400,
+    "interact": 22.7
+  }
+]

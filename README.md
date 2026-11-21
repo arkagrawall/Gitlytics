@@ -96,6 +96,26 @@ Gitlytics/
 
 ---
 
+## ⚛️ End-Semester Version — React (`gitlytics-react/`)
+
+The final version of Gitlytics is rebuilt in **React 18 + Vite** (course timeline step 6: *Implementation of React*).
+
+* Live data from the **GitHub REST API** for any username (`async/await`, `Promise.all`), with saved snapshots for `torvalds` and `gautam100` and automatic fallback when the API is unavailable or rate-limited.
+* Username validation (regex), recent-search history, dark/light theme (CSS variables + `data-theme`), live clock, shareable URLs (`?user=gautam100&mode=snapshot`).
+* `ProfileAnalyzer extends Analyzer` (OOP) computes total/median stars, language share, activity by year and a developer level.
+* Searchable, filterable, sortable repository table (switch-case + curried comparators) with a details modal.
+
+```bash
+cd gitlytics-react
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build in dist/
+```
+
+The final project report (filled GLA template, with screenshots and diagrams) is in [`report/`](report/).
+
+---
+
 ## 🚀 Installation & Local Setup
 
 1. **Clone the repository:**
